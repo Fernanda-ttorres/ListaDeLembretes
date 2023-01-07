@@ -7,8 +7,12 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
 }
 body, html, #root{
-	height: 100%;
-	padding: 0;
-	margin: 0;
+	display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #E5E5E5;
 }
 `;
