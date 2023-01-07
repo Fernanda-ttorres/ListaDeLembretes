@@ -1,43 +1,33 @@
 import styled from "styled-components";
 
 export const StyledH2 = styled.h2`
-    font-size: 3.5vw;
-    font-weight: 700;
     color:#000000;
     text-align: center;
-    line-height: 4vw;
     margin: 0;  
     margin-block-start: 0;
     margin-block-end: 0;
 `;
 
 export const StyledH3 = styled.h3`
-    font-size: 60rem;
+    color:#fff;
     font-weight: 400;
-    color:#000000;
-    line-height: 90rem;
-    margin: 0;  
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin: 1rem; 
 `;
 
-export const StyledH4 = styled.h4`
-    font-size: 2.2vw;
-    font-weight: 700;
+export const StyledH4 = styled.h4` 
     color:#000000;
     text-align: center;    
-    line-height: 2.3vw;
+    padding: 1rem;
+    margin: 2rem;  
     margin: 0;  
     margin-block-start: 0;
     margin-block-end: 0;
 `;
 
-export const StyledH5 = styled.h5`   
-    font-size: 30rem;
-    font-weight: 400;
+export const StyledH5 = styled.h5`    
     color:#000000;   
-    line-height: 45rem;
-    margin: 0;  
+    padding: 1rem;
+    margin: 2rem;  
     margin-block-start: 0;
     margin-block-end: 0;  
 `;

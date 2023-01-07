@@ -9,12 +9,12 @@ export const CardDiv = styled.div`
     height: 3rem;
     margin: 0.5rem 0;
 
-    h3::before{
+    /* h3::before{
         content: '';
         display: block;
         width: 7px;
         height: 35px;
         background: #a52158;
         border-radius: 10px;
-    }
+    } */
 `;

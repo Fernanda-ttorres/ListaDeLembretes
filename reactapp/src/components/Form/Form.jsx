@@ -14,7 +14,7 @@ const schema = yup.object({
   data: yup.date().min(yesterday, 'Não é possível incluir uma data passada.').required()
 }).required();
 
-const Form = () => {
+const Form = ({onChange, onClick}) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     });
@@ -23,11 +23,11 @@ const Form = () => {
 
     return (
         <FormStyled onSubmit={handleSubmit(onSubmit)}>
-            <Input id="nome" type="text" label="Nome:" register={register} placeholder="Nome do lembrete"/>
+            <Input id="nome" type="text" label="Nome:" register={register} placeholder="Nome do lembrete" onChange={onChange} />
             <ErrorMenssage>{errors.nome?.message}</ErrorMenssage>
             <Input id="data" type="date" label="Data:" register={register} />
             <ErrorMenssage>{errors.data?.message}</ErrorMenssage>
-            <Button type="submit" id="criar" text="Criar"/>
+            <Button type="submit" id="criar" text="Criar" onClick={onClick}/>
         </FormStyled>        
     );
 };
