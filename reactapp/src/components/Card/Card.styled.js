@@ -27,3 +27,14 @@ export const CardDiv = styled.div`
         border-radius: 10px;
     } */
 `;
+
+export const CardBranco = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 35rem;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 2.5rem;
+`;
