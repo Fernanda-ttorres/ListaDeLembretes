@@ -2,12 +2,21 @@ import styled from "styled-components";
 
 export const CardDiv = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background: #28b7c5 ;
     border-radius: 15px;
     width: 100%;
     height: 3rem;
     margin: 0.5rem 0;
+    padding: 0 1rem;
+
+    button {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
 
     /* h3::before{
         content: '';
