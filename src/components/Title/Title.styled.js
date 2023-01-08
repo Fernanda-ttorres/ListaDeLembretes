@@ -24,11 +24,3 @@ export const StyledH4 = styled.h4`
     margin-block-start: 0;
     margin-block-end: 0;
 `;
-
-export const StyledH5 = styled.h5`    
-    color:#000;   
-    padding: 1rem;
-    margin: 2rem;  
-    margin-block-start: 0;
-    margin-block-end: 0;  
-`;

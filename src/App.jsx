@@ -1,6 +1,6 @@
 import ReminderList from "./pages/ReminderList/ReminderList";
 
-function App() {
+const App = () => {
   return (
     <>
       <ReminderList />

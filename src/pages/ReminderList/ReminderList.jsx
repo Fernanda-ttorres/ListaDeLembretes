@@ -23,7 +23,7 @@ const ReminderList = ({}) => {
 
     setReminder((prevState) => [...prevState, newReminder]);
 
-    if (teste == "" || dates == "") {
+    if (checkDate == "" || dates == "") {
       const newDate = {
         date: cardDate,
       };
@@ -31,12 +31,12 @@ const ReminderList = ({}) => {
       setDate((prevState) => [...prevState, newDate]);
       
     } else {
-      console.log("ja tem essa data");
+      console.log("Já tem essa data");
     }
   };
 
-  const teste = dates.filter((date) => date.date == cardDate);
-  console.log(teste);
+  const checkDate = dates.filter((date) => date.date == cardDate);
+  console.log(checkDate);
   
   const sortedDate = dates.sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
