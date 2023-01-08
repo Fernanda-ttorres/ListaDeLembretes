@@ -1,9 +1,11 @@
 import React from "react";
 import { Card } from "../../components/Card/Card";
 import Form from "../../components/Form/Form";
-import { CardBranco } from "../../components/Card/Card.styled";
+import { WhiteCard, StyledUl } from "../ReminderList/ReminderList.styled";
 import { useState } from "react";
 import Title from "../../components/Title/Title";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 
 const ReminderList = ({}) => {
   const [cardName, setCardName] = useState("");
@@ -13,55 +15,77 @@ const ReminderList = ({}) => {
   const [dates, setDate] = useState([]);
 
   const handleAddReminder = () => {
-    if (cardName != "" && cardDate != "") {
-      const newReminder = {
-        name: cardName,
-        id: Math.random(),
-        date: cardDate,
-      };
-      setReminder((prevState) => [...prevState, newReminder]);      
-    }
-    
-    const newDate = {
+    const newReminder = {
+      name: cardName,
+      id: Math.random(),
       date: cardDate,
     };
 
-    setDate((prevState) => [...prevState, newDate]);
-    
+    setReminder((prevState) => [...prevState, newReminder]);
+
+    if (teste == "" || dates == "") {
+      const newDate = {
+        date: cardDate,
+      };
+
+      setDate((prevState) => [...prevState, newDate]);
+      
+    } else {
+      console.log("ja tem essa data");
+    }
   };
 
-  //************ORDENAÇÃO****************
-  const sorted = reminders.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-  const sortedDate = dates.sort((a,b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-  console.log(sorted);
+  const teste = dates.filter((date) => date.date == cardDate);
+  console.log(teste);
+  
+  const sortedDate = dates.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
 
-  const handleDelete = (id) => {
+  const handleDelete = (id, date) => {
     const newReminders = reminders.filter((reminder) => reminder.id !== id);
 
     setReminder(newReminders);
-  };
 
+    const cont = reminders.filter((reminder) => reminder.date == date);
+    console.log(cont);
+    if (cont.length == 1 ) {
+      const newDates = dates.filter((date) => date.date != cont.map((c) => c.date));
+
+      setDate(newDates);
+    }
+  }; 
+  
+  function formatDate(data) {
+    let newDate = new Date(data);
+    return newDate.toISOString().substr(0, 10).split('-').reverse().join('/');
+  }
+  
   return (
-    <CardBranco>
+    <WhiteCard>
       <Form
         onChange={(e) => setCardName(e.target.value)}
         onChangeDate={(e) => setCardDate(e.target.value)}
-        onClick={handleAddReminder}
+        onSubmit={handleAddReminder}
       />
-      <Title tagName="h2" titleText="Lista de Lembretes" />
+      <Title tagName="h2" titleText="Lista de Lembretes" icon={<FontAwesomeIcon icon={faCalendarCheck} />} />
 
       {dates.map((date) => (
-        <Title tagName="h5" titleText={date.date} />
-      ))}
+        <StyledUl>
+          <p>{formatDate(date.date)}</p>
 
-      {reminders.map((reminder) => (
-        <Card
-          nome={reminder.name}
-          key={reminder.id}
-          onClick={() => handleDelete(reminder.id)}
-        />
+          {reminders
+            .filter((reminder) => reminder.date == date.date)
+            .map((reminder) => (
+              <Card
+                nome={reminder.name}
+                key={reminder.id}
+                onClick={() => handleDelete(reminder.id, date.date)}
+              />
+            ))}
+        </StyledUl>
       ))}
-    </CardBranco>
+    </WhiteCard>
   );
 };
 

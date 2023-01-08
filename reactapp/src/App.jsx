@@ -1,11 +1,11 @@
-import ReminderList from './pages/ReminderList/ReminderList'
-function App() {
+import ReminderList from "./pages/ReminderList/ReminderList";
 
+function App() {
   return (
     <>
-    <ReminderList/>
+      <ReminderList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

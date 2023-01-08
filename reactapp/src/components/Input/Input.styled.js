@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0.3rem 0;
 `;
 
 export const LabelStyled = styled.label`
@@ -18,5 +19,5 @@ export const InputStyled = styled.input`
     height: 2.5rem;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
-    padding-left: 0.5rem;
+    padding: 0 0.6rem;
 `;

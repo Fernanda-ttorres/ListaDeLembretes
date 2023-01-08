@@ -8,11 +8,11 @@ export const GlobalStyle = createGlobalStyle`
 }
 body, html, #root{
 	display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    width: 99%;
+    height: 97vh;
+    //justify-content: center;
+    //-items: center;
     flex-direction: column;
-    background: #E5E5E5;
+   
 }
 `;
