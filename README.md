@@ -3,6 +3,7 @@
 Implementação de uma lista de lembretes ordenados cronologicamente pela data de cada lembrete.
 
 - 💻 Deploy: https://reminderlist-fernanda.netlify.app/
+- 🎯 Scrum Board: https://trello.com/invite/b/4VzL1nti/ATTIb5640c51c174381770f08eb71e5cfb44607251BF/lista-de-lembretes
 
 # :hammer: Funcionalidades do projeto
 
