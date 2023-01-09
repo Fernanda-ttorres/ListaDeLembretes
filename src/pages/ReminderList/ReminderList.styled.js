@@ -5,17 +5,22 @@ export const WhiteCard = styled.div`
   flex-direction: column;
   width: 50%;  
   margin: 2rem auto;  
+
+  @media (max-width: 768px) {
+    width: 90%;  
+    margin: 1rem auto;  
+  }
 `;
 
 export const StyledUl = styled.ul`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 
-    p{
-        font-weight: 600;
-        margin: 1rem 0 0.2rem 0;
-    }
+  p{
+    font-weight: 600;
+    margin: 1rem 0 0.2rem 0;
+  }
 `;

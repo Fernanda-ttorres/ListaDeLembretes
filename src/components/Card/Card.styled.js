@@ -14,17 +14,12 @@ export const CardDiv = styled.li`
 
     button {
         background: transparent;
-       color: #fff;
+        color: #fff;
         border: none;
         cursor: pointer;
     }
 
-    /* h3::before{
-        content: '';
-        display: block;
-        width: 7px;
-        height: 35px;
-        background: #a52158;
-        border-radius: 10px;
-    } */
+    @media (max-width: 768px) {
+        margin: 0.5rem;
+    }
 `;

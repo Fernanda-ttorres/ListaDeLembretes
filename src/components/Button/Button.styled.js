@@ -16,4 +16,12 @@ export const StyledButton = styled.button`
     align-self: end;
     margin: 1rem 0;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        gap: 0.6rem;
+        align-self: center;
+        border-radius: 20px;
+        margin: 1rem 0 1.5rem 0;
+    }
 `;

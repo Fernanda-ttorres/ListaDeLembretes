@@ -47,10 +47,10 @@ const ReminderList = ({}) => {
 
     setReminder(newReminders);
 
-    const cont = reminders.filter((reminder) => reminder.date == date);
-    console.log(cont);
-    if (cont.length == 1 ) {
-      const newDates = dates.filter((date) => date.date != cont.map((c) => c.date));
+    const countLi = reminders.filter((reminder) => reminder.date == date);
+    console.log(countLi);
+    if (countLi.length == 1 ) {
+      const newDates = dates.filter((date) => date.date != countLi.map((c) => c.date));
 
       setDate(newDates);
     }

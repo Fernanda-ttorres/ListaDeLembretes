@@ -4,6 +4,10 @@ export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0.3rem 0;
+
+    @media (max-width: 768px) {
+        margin: 0;
+    }
 `;
 
 export const LabelStyled = styled.label`
@@ -20,4 +24,8 @@ export const InputStyled = styled.input`
     border: 2px solid #AAAAAA;
     border-radius: 4px;
     padding: 0 0.6rem;
+
+    @media (max-width: 768px) {
+        border-radius: 20px;
+    }
 `;
