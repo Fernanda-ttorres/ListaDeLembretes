@@ -2,8 +2,7 @@
 
 Implementação de uma lista de lembretes ordenados cronologicamente pela data de cada lembrete.
 
-### 💻 Deploy:
-https://reminderlist-fernanda.netlify.app/
+- 💻 Deploy: https://reminderlist-fernanda.netlify.app/
 
 # :hammer: Funcionalidades do projeto
 
