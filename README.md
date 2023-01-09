@@ -16,13 +16,15 @@ Você pode baixar uma pasta zip com os arquivos ou clonar o repositório.
 
 # 🛠️ Rodar o projeto
 
-Após abrir o projeto em sua IDE, abra o terminal e execute o seguinte comando:
- ### npm run dev
-Esse comando executa o aplicativo no modo de desenvolvimento.
-Abra o link gerado para visualizá-lo no navegador.
+Após abrir o projeto em sua IDE, abra o terminal e execute os seguintes comandos para instalar as dependências e iniciar o servidor:
 
-A página será recarregada se você fizer edições.
-Você também verá os erros no console.
+```bash
+  npm install
+```
+
+```bash
+  npm run dev
+```
 
 # ✔️ Tecnologias utilizadas
 
