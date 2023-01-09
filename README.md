@@ -2,7 +2,7 @@
 
 Implementação de uma lista de lembretes ordenados cronologicamente pela data de cada lembrete.
 
-## 💻 Deploy:
+### 💻 Deploy:
 https://reminderlist-fernanda.netlify.app/
 
 # :hammer: Funcionalidades do projeto
@@ -17,7 +17,7 @@ Você pode baixar uma pasta zip com os arquivos ou clonar o repositório.
 # 🛠️ Rodar o projeto
 
 Após abrir o projeto em sua IDE, abra o terminal e execute o seguinte comando:
- ## npm run dev
+ ### npm run dev
 Executa o aplicativo no modo de desenvolvimento.
 Abra o link gerado para visualizá-lo no navegador.
 
